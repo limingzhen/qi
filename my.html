@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" href="css/animate.min.css" />
+		<script src="js/jquery-2.1.0.js"></script>
+        <script src="js/swiper.jquery.min.js"></script>
+        <script src="js/swiper.animate1.0.2.min.js"></script>
+        <style>
+        	*{
+        		margin:0;
+        		padding:0;
+        		border:0;
+        		height:100%;
+        		font-family: "幼圆";
+        	}
+        	.swiper-container{
+        		width:100%;
+        		background: gainsboro;
+        		/*line-height:200px;*/
+        	}
+        	.box{
+        		width:100%;
+        		height:100%;
+        		background:url(img/c.jpg) no-repeat;
+        		background-size:cover;
+        	}
+            
+        	.box img{
+        		height:10%;
+        		margin-left:31%;
+        		
+        	}
+        	
+        	.bo{
+        		width:100%;
+        		height:46%;
+        		border-radius:50%;
+        		background:url(img/che.jpg) no-repeat;
+        		
+        	}
+        	.bo1{
+        		width:100%;
+        		height:46%;
+        		border-radius:50%;
+        		background: url(img/c1.jpg) no-repeat;
+        	}
+        	.box1{
+        		width:400px;
+        		height:195px;
+        		background:grey;
+        		opacity:0.3;
+        		margin:140px auto;
+        		font-size:30px;
+        		color:white;
+        		text-align: center;
+        		line-height: 52px;
+        	}
+        	p{
+        		width:400px;
+        		float:left;
+        		margin-top:45px;
+        	}
+        	.box2{
+        		margin-top:20px;
+        	}
+        	.bb{
+        		margin-top:50px;
+        		position:relative;
+        	}
+        	.bb span{
+        		font-size:50px;
+        		width:90%;
+        		height:40px;
+        		color:teal;
+        		top:60px;
+        	}
+        	.bb1{
+        		width:100%;
+        		height:100%;
+        		background:url(img/c5.jpg) no-repeat;
+        		margin-top:-1400px;
+        		
+        		background-size:contain;
+        		
+        	}
+        	.bo11{
+        		width:100%;
+        		height:100%;
+        		background:url(img/c7.png) no-repeat;
+        		background-size:contain;
+        		
+        		position:absolute;
+        	}
+        	.bo2{
+        		width:100%;
+        		height:100%;
+        		background:url(img/c8.png) no-repeat;
+        		position:absolute;
+        		top:1102px;
+        		background-size:contain;
+        	}
+        	.box4{
+        		width:100%;
+        		height:100%;
+        		background:url(img/c9.png) no-repeat;
+        		position:absolute;
+        		top:750px;
+        		background-size:contain;
+        	}
+        </style>
+	</head>
+	<body>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="box">
+						<img src="img/logo.png" class="ani" swiper-animate-effect="wobble" 
+							swiper-animate-duration="0.5s" 
+							swiper-animate-delay="0.1s"/>
+						<div class="box1 ani" swiper-animate-effect="fadeInUp" 
+							swiper-animate-duration="0.3s" 
+							swiper-animate-delay="0.5s">
+							<p>新款Quattroporte总裁轿车系列玛莎拉蒂匠之作</p>
+						</div>
+						<div class="box1 box2 ani"  swiper-animate-effect="fadeInUp" 
+							swiper-animate-duration="0.3s" 
+							swiper-animate-delay="1s">
+							<p>GranCabrio敞篷跑车系列</p>
+						</div>
+						<div class="box1 box2 ani" swiper-animate-effect="fadeInUp" 
+							swiper-animate-duration="0.3s" 
+							swiper-animate-delay="1.5s">
+							<p>GranTurismo跑车系列</p>
+						</div>
+						<div class="box1 box2 ani" swiper-animate-effect="fadeInUp" 
+							swiper-animate-duration="0.3s" 
+							swiper-animate-delay="2s">
+							<p>LevanteTHE MASERATI OF SUVs</p>
+						</div>
+					</div>
+				</div>	
+				<div class="swiper-slide">
+					<div class="bo ani"swiper-animate-effect="rollIn" 
+							swiper-animate-duration="0.5s" 
+							swiper-animate-delay="0.2s">
+					</div>
+					<div class="bb ani"swiper-animate-effect="slideInLeft" 
+							swiper-animate-duration="0.5s" 
+							swiper-animate-delay="0.5s">
+					<span>亮点配置:</span><br />
+					<span>优雅外观、宽敞的皮革座椅</span><br />
+					<span>可提供无与伦比的舒适驾乘体验</span><br />
+					<span>敏锐的车载控制系统、卓越的动力性能</span>
+					</div>
+					<div class="bb1 ani infinite"swiper-animate-effect="flash" 
+							swiper-animate-duration="0.5s" 
+							swiper-animate-delay="1s"></div>		
+				</div>
+				<div class="swiper-slide">
+					<div class="bo11"></div>
+					<div class="bo2"></div>
+					<div class="box4  ani"swiper-animate-effect="bounceInRight" 
+							swiper-animate-duration="1s" 
+							swiper-animate-delay="0.3s""></div>
+				</div>
+			<div class="swiper-scrollbar"></div>			
+		</div>
+		</div>
+	</body>
+	<script>
+		var mySwiper = new Swiper ('.swiper-container', {
+				scrollbar: '.swiper-scrollbar',			
+			  onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+			    swiperAnimateCache(swiper); //隐藏动画元素 
+			    swiperAnimate(swiper); //初始化完成开始动画
+			  }, 
+			  onSlideChangeEnd: function(swiper){ 
+			    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+			  } 
+			  }) 
+	</script>
+</html>
